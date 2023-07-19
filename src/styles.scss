@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 1440px;
+    height: 1118px;
+
+}
+
+body {
+    border: none;
+    min-height: calc(100vh - 88px);
+    background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
+
+}
