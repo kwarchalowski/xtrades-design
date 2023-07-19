@@ -1,57 +1,23 @@
+
 #content {
+    display: block;
     width: 100%;
-    height: 1118px;
+    height: auto;
 
-
-        // background: linear-gradient(180deg, #133B75 0%, #0C274F 100%) opacity(0.088);
-        // background-image: radial-gradient(white 1px, transparent 0);
-        // background-size: 36px 36px;
-        // background-position: 0px -36px;
-        // opacity: 0.088;
-
-        // &::before {
-        //     content: '';
-        //     position:absolute;
-        //     top:0px;
-        //     left:0px;
-        //     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
-        //     background-image: radial-gradient(white 1px, transparent 0);
-        //     background-size: 36px 36px;
-        //     background-position: 0px -36px;
-        //     opacity: 0.088;
-        // }
-
-}
-
-#dots {
-    width: 100%;
-    height: 100%;
-
-
-    
-    // opacity: 0.1;
-
+    //* Dotted background
     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
-    background-image: radial-gradient(white 1px, transparent 0);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.095) 1px, transparent 0);
     background-size: 36px 36px;
     background-position: 0px -36px;
-    opacity: 0.088;
-    // TODO: fix when resize
-
 }
 
 #footer {
     position: relative;
     bottom: 30px;
-    // margin: auto;
-    // width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     p.centered {
         color: #FFF;
-        font-family: DM Sans;
+        font-family: 'DM Sans';
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
@@ -66,9 +32,14 @@
 }
 
 #backgroundLogo {
-    position: absolute;
-    top: 135px;
-    left: calc(50% - 223.95px);
-    width: 446.191px;
-    height: 284.08px;
+    height: calc(100vh - 104px); //* remember about navbar height + paddings
+    min-height: 600px;
+    background-image: url( '../../assets/group7549.svg' );
+    background-repeat: no-repeat;
+    background-position: center 47px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
