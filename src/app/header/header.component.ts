@@ -113,6 +113,7 @@ export class HeaderComponent implements OnInit {
       this.checkPath();
       this.showHamburger = true; //!
       this.isPageNarrow = true;
+      
       this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
       return
     }
@@ -134,7 +135,7 @@ export class HeaderComponent implements OnInit {
     if(this.router.url != '/career') { hamburger.style.filter = 'invert(0)'; return; }
 
     hamburger.style.filter = 'invert(1)'
-    
+
     // if(hamburger && this.router.url == '/career') hamburger.style.filter = 'invert(1)';
     // else if(hamburger) hamburger.style.filter = 'invert(0)';
   }
