@@ -1,10 +1,12 @@
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, HostListener, OnInit, Output, Renderer2 } from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
+import { Router } from '@angular/router';
 
 interface SideNavToggle {
   screenWidth: number;
   showHamburger: boolean;
+  showSidenav: boolean;
   screenHeight: number;
 }
 
@@ -48,7 +50,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   showHamburger = false;
   isPageNarrow = false;
@@ -59,32 +61,47 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.resize();
+
   }
 
   ngOnInit(): void {
     this.resize();
   }
 
+  ngAfterViewInit() {
+    this.checkPath();
+  }
+
 
 
   toggleCollapse(): void {
     this.showHamburger = !this.showHamburger;
-    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
   }
 
   toggleSidebar(): void {
+    const hamburger: HTMLElement | null = document.getElementById('hamburger');
+    // if(this.router.url == '/career') hamburger.style.filter = 'invert(0)';
     // this.isPageNarrow != this.isPageNarrow;
     // this.showHamburger = !this.showHamburger;
     // console.log('hey');
-    if(this.isPageNarrow) {
-      this.showSidebar != this.showSidebar;
+    if(hamburger && this.isPageNarrow) {
+      console.log(this.showSidebar);
+      // this.showSidebar = true;
       const container: HTMLElement | null = document.getElementById('container');
-      if(this.showSidebar) {
-        const container: HTMLElement | null = document.getElementById('container');
-        if(container) container.style.width = '0';
-      } 
+    this.showSidebar = !this.showSidebar;
+
+      if(this.showSidebar && container) {
+        container?.classList.add('show');
+        hamburger.style.filter = 'invert(0)';
+        this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
+      } else {
+        container?.classList.remove('show');
+        hamburger.style.filter = 'invert(1)';
+        this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
+      }
     }
-    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+    // this.showSidebar != this.showSidebar;
   }
 
 
@@ -93,20 +110,32 @@ export class HeaderComponent implements OnInit {
     this.screenHeight = window.innerHeight;
 
     if(this.screenWidth <= 800) {
+      this.checkPath();
       this.showHamburger = true; //!
       this.isPageNarrow = true;
-      this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+      this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
       return
     }
 
     this.showHamburger = false;
     this.isPageNarrow = false;
-    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
   }
 
   captureDoneEvent(event: AnimationEvent) {
     if(this.isPageNarrow) {
       this.showHamburger = true;
     }
+  }
+
+  checkPath(): void {
+    const hamburger: HTMLElement | null = document.getElementById('hamburger');
+    if(!hamburger) return;
+    if(this.router.url != '/career') { hamburger.style.filter = 'invert(0)'; return; }
+
+    hamburger.style.filter = 'invert(1)'
+    
+    // if(hamburger && this.router.url == '/career') hamburger.style.filter = 'invert(1)';
+    // else if(hamburger) hamburger.style.filter = 'invert(0)';
   }
 }

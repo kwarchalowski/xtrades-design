@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class BodyComponent {
 
   @Input() collapsed = false;
+  @Input() showSidenav = true;
   @Input() screenHeight = 0;
   @Input() screenWidth = 0;
 

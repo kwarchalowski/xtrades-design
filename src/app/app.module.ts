@@ -17,7 +17,7 @@ import { BodyComponent } from './body/body.component';
     LoginComponent,
     CareersComponent,
     LoginButtonsComponent,
-    BodyComponent
+    BodyComponent,
   ],
   imports: [
     BrowserModule,

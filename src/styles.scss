@@ -27,3 +27,61 @@ app-root {
     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
 }
 
+.btn-bouncing {
+    @keyframes bounce {
+
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        40% {
+            -webkit-transform: translateY(-1px);
+            -ms-transform: translateY(-1px);
+            transform: translateY(-1px)
+        }
+
+        60% {
+            -webkit-transform: trans2lateY(2px);
+            -ms-transform: translateY(2px);
+            transform: translateY(2px)
+        }
+    }
+
+    span {
+        -webkit-animation-duration: .6s;
+        animation-duration: .6s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+    }
+
+    &:hover {
+        span {
+            filter: brightness(1.2);
+
+            cursor: pointer;
+            animation-name: bounce;
+            -moz-animation-name: bounce;
+            -o-animation-name: bounce;
+            -webkit-animation-name: bounce;
+        }
+    }
+}
+
+.highlight {
+    &:hover {
+        filter: brightness(1.2);
+        // color: red;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

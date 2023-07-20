@@ -11,11 +11,14 @@
         background: linear-gradient(270deg, #133B75 0%, #0C274F 100%);
 
         #hamburger {
+
             margin-left: 32px;
         }
     }
 
     &.vertical {
+
+    transform: translateX(-290px);
 
 
         display: flex;
@@ -34,9 +37,22 @@
         background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
 
         #hamburger {
+            position: fixed;
             margin: 32px;
+            left: 290px;
         }
 
+    }
+}
+
+#container {
+
+    &.show {
+        transform: translateX(0px);
+
+        #hamburger {
+            left: 0;
+        }
     }
 }
 
@@ -108,7 +124,8 @@
     letter-spacing: -0.758px;
 }
 
-#home {
+#home,
+#career {
     &.horizontal {
         display: inline-flex;
         color: #FFF;
@@ -130,8 +147,8 @@
 }
 
 .menu-links {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
     color: #FFF;
     font-family: 'Poppins';
     font-size: 18px;
@@ -139,9 +156,12 @@
     font-weight: 400;
     line-height: normal;
     // letter-spacing: -1px;
+    gap: 32px;
 
     &.vertical {
-        margin-top: 17px;
+        flex-direction: column;
+        // margin-top: 17px;
+        margin-top: 100px;
         margin-left: 23px;
         gap: 24px;
     }
@@ -194,6 +214,15 @@
 
     box-shadow: none;
     border: none;
+    transition: 300ms all ease;
+    transform-origin: bottom;
+
+
+    &:hover {
+        // background: #bdd2f1;
+        // color:#15183f;
+        filter: brightness(1.2);
+    }
 
     &.vertical {
         justify-content: space-between;
@@ -212,6 +241,7 @@
 .btn-membership {
     display: inline-flex;
     height: 36px;
+    width: 118px;
     padding: 12px 20px;
     justify-content: space-between;
     align-items: center;
@@ -229,6 +259,17 @@
     font-weight: 500;
     line-height: 16px;
     /* 133.333% */
+    transition: 300ms all ease;
+    transform-origin: bottom;
+
+
+    &:hover {
+        border: 1px solid #060d24;
+        background: #bdd2f1;
+        color: #15183f;
+        filter: brightness(1.2);
+
+    }
 
     &.vertical {
         justify-content: space-between;
