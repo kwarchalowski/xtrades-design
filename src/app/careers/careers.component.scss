@@ -12,7 +12,8 @@
         width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-left: 14%;
+        height: calc(100vh - 104px);
+        // margin-left: 14%;
 
         .hiringLabel {
             color: #445A63;
@@ -28,6 +29,9 @@
         .offer-wrapper {
             display: flex;
             flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            min-width: 1050px;
 
             //* Card container
             .offer-card-container {
@@ -36,7 +40,9 @@
                 height: 680px;
                 background-color: #F7F9FC;
                 border: 1px solid #DEE2E7;
-                border-radius: 3%;
+                border-radius: 4%;
+                margin-top: 90px;
+                margin-left: 57px;
 
                 .card-content-container {
                     display: flex;
@@ -71,6 +77,7 @@
                             font-style: normal;
                             font-weight: 700;
                             line-height: normal;
+                            margin-right: 24px;
                         }
 
                         h2 {
@@ -240,6 +247,7 @@
     line-height: 22px;
     /* 157.143% */
     gap: 36px;
+    min-width: 1000px;
 
     .policies-wrapper {
         display: flex;
