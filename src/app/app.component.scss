@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    // router-outlet {
+    //     height: 100%;
+    // }
+}
+
+@media screen and (max-width: 800) {
+    .wrapper {
+        flex-direction: row;
+        
+        router-outlet {
+            height: 100%;
+        }
+    }
+}

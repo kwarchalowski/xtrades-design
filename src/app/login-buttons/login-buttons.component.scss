@@ -5,9 +5,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: -1;
 }
 
-#btnDiscord {
+#buttons {
+    z-index: -1;
+}
+
+.btnDiscord {
     display: flex;
     width: 280px;
     height: 48px;
@@ -31,9 +36,10 @@
     line-height: 16px;
     /* 114.286% */
     letter-spacing: -0.3px;
+
 }
 
-#btnEmail {
+.btnEmail {
     display: flex;
     width: 280px;
     height: 48px;

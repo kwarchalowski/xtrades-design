@@ -14,6 +14,7 @@ html {
 
 body {
     border: none;
+    min-width: 500px;
     // background-repeat: ;
 }
 
@@ -24,5 +25,5 @@ app-root {
     // height: 100%;
     // aspect-ratio: 1440/1118;
     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
-
 }
+
