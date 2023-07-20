@@ -9,9 +9,14 @@ export class BodyComponent {
 
   @Input() collapsed = false;
   @Input() screenHeight = 0;
+  @Input() screenWidth = 0;
 
   getBodyClass(): string {
     let styleClass = '';
+    if (this.screenWidth < 800) {
+      styleClass = 'narrow';
+      
+    }
     // if (this.collapsed && this.screenHeight > 800) {
     //   styleClass = 'body-trimmed';
     // } else if (this.collapsed && this.screenHeight <= 800 && this.screenHeight > 0) {

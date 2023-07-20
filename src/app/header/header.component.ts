@@ -93,7 +93,7 @@ export class HeaderComponent implements OnInit {
     this.screenHeight = window.innerHeight;
 
     if(this.screenWidth <= 800) {
-      this.showHamburger = false; //!
+      this.showHamburger = true; //!
       this.isPageNarrow = true;
       this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
       return
