@@ -3,6 +3,221 @@
     width: 100vw;
     height: calc(100vh - 88px);
     background-color: #fff;
+
+
+    #career {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 14%;
+
+        .hiringLabel {
+            color: #445A63;
+            font-family: Poppins;
+            font-size: 2.25rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-left: 40px;
+            margin-top: 18px;
+        }
+
+        .offer-wrapper {
+            display: flex;
+            flex-direction: row;
+
+            //* Card container
+            .offer-card-container {
+                display: flex;
+                width: 670px;
+                height: 680px;
+                background-color: #F7F9FC;
+                border: 1px solid #DEE2E7;
+                border-radius: 3%;
+
+                .card-content-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 100%;
+                    width: 100%;
+
+                    .card-content {
+                        color: #445A63;
+                        font-family: Poppins;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        /* 200% */
+
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        margin: 30px;
+
+                        li {
+                            margin-left: 20px;
+                            margin-top: 8px;
+                        }
+
+                        h1 {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+
+                        h2 {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px;
+                            /* 225% */
+
+                            margin-top: 15px;
+                        }
+
+                        p {
+                            margin-top: 17px;
+                        }
+
+                        ul {
+                            margin-top: 12px;
+                        }
+
+
+
+                        .rent {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            /* 200% */
+                        }
+
+                        .brackets {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+
+                        .compensation {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 30px;
+                        }
+
+                    }
+
+                    .card-footer {
+                        width: 100%;
+                        height: 112px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        border-top: 2px solid #DEE2E7;
+                        position: relative;
+                        bottom: 0px;
+
+
+                        .footer-note {
+                            color: #445A63;
+                            font-family: Poppins;
+                            font-size: 9px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 18px;
+                            /* 180% */
+                            width: 225px;
+                            margin: 32px;
+
+                            a {
+                                color: #00A5EA;
+                                font-size: 10px;
+                                text-decoration-line: underline;
+                            }
+
+                        }
+
+                        .btnContact-card {
+                            color: #103366;
+                            text-align: center;
+                            font-family: Poppins;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            width: 160px;
+                            height: 43px;
+                            margin: 32px;
+                            background: linear-gradient(225deg, #19C7F2 0%, #00A5EA 100%);
+                            box-shadow: none;
+                            border: none;
+                            border-radius: 8%/32%;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .offer-wrapper>.offer-list {
+            color: #445A63;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            ul {
+                padding: 20px;
+                width: 250px;
+
+                li {
+                    list-style-type: none;
+                    width: 208px;
+                    border-top: 2px solid #DEE2E7;
+                    margin-left: 20px;
+                    padding: 20px 0px;
+                    padding-right: 30px;
+                    opacity: 0.5;
+
+                    &:first-child {
+                        color: #445A63;
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
 }
 
 #footer {
@@ -40,7 +255,7 @@
             display: inherit;
             flex-direction: column;
 
-            &> .value {
+            &>.value {
                 font-weight: 600;
             }
 
@@ -55,8 +270,8 @@
 
         .socials {
             display: flex;
-        flex-direction: row;
-        gap: 10px;
+            flex-direction: row;
+            gap: 10px;
 
         }
     }
