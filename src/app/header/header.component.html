@@ -1,16 +1,16 @@
-<div class="container" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
+<div id="container" class="container" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
     <!-- Xtrades logo -->
     <div id="logo" *ngIf="!showHamburger" @thumbsInOut class="anim"
         [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
         <img id="group7548" src="../../assets/group7548.svg" alt="Xtrades logo">
         <span id="group7548-label" *ngIf="!isPageNarrow">Xtrades</span>
     </div>
-    <div id="hamburger" *ngIf="showHamburger" @thumbsInOut class="anim">
-        <img src="../../assets/hamburger.svg" alt="Menu button" (click)="toggleHamburger()">
+    <div id="hamburger" *ngIf="showHamburger" @thumbsInOut class="anim" (click)="toggleSidebar()">
+        <img src="../../assets/hamburger.svg" alt="Menu button">
     </div>
-    <div id="content" *ngIf="!showHamburger" @thumbsInOut [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
+    <div id="content" @thumbsInOut [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="anim">
         
-        <div class="menu-links" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
+        <div class="menu-links anim" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
             <span id="home" routerLink="login" routerLinkActive="active" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">Home</span>
             <span *ngIf="isPageNarrow" routerLink="career" routerLinkActive="active">Career</span>
 

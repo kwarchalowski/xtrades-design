@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface SideNavToggle {
   screenWidth: number;
   showHamburger: boolean;
+  screenHeight: number;
 }
 
 @Component({
@@ -15,9 +16,11 @@ export class AppComponent {
 
   isSideNavCollapsed = false;
   screenWidth = 0;
+  screenHeight = 0;
 
   toggleSideNav(data: SideNavToggle): void {
     this.screenWidth = data.screenWidth;
+    this.screenHeight = data.screenHeight;
     this.isSideNavCollapsed = data.showHamburger;
   }
 

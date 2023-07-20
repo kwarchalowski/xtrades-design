@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { CareersComponent } from './careers/careers.component';
 import { LoginButtonsComponent } from './login-buttons/login-buttons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     LoginComponent,
     CareersComponent,
-    LoginButtonsComponent
+    LoginButtonsComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

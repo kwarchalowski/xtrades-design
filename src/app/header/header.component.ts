@@ -1,10 +1,11 @@
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output, Renderer2 } from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
 
 interface SideNavToggle {
   screenWidth: number;
   showHamburger: boolean;
+  screenHeight: number;
 }
 
 @Component({
@@ -47,39 +48,60 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
 
+  constructor() { }
+
   showHamburger = false;
   isPageNarrow = false;
   screenWidth = 0;
+  screenHeight = 0;
+  showSidebar = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
+    this.resize();
+  }
+
+  ngOnInit(): void {
+    this.resize();
+  }
+
+
+
+  toggleCollapse(): void {
+    this.showHamburger = !this.showHamburger;
+    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+  }
+
+  toggleSidebar(): void {
+    // this.isPageNarrow != this.isPageNarrow;
+    // this.showHamburger = !this.showHamburger;
+    // console.log('hey');
+    if(this.isPageNarrow) {
+      this.showSidebar != this.showSidebar;
+      const container: HTMLElement | null = document.getElementById('container');
+      if(this.showSidebar) {
+        const container: HTMLElement | null = document.getElementById('container');
+        if(container) container.style.width = '0';
+      } 
+    }
+    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
+  }
+
+
+  resize(): void {
     this.screenWidth = window.innerWidth;
-    
+    this.screenHeight = window.innerHeight;
+
     if(this.screenWidth <= 800) {
-      this.showHamburger = true;
-      this.isPageNarrow = false;
-      this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
+      this.showHamburger = false; //!
+      this.isPageNarrow = true;
+      this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
       return
     }
 
     this.showHamburger = false;
-    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
-
-  }
-
-  ngOnInit(): void {
-    this.screenWidth = window.innerWidth;
-  }
-
-  toggleCollapse(): void {
-    this.showHamburger = !this.showHamburger;
-    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
-  }
-
-  toggleHamburger(): void {
-    this.isPageNarrow != this.isPageNarrow;
-    // this.showHamburger = !this.showHamburger;
-    // this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
+    this.isPageNarrow = false;
+    this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight});
   }
 
   captureDoneEvent(event: AnimationEvent) {
@@ -87,5 +109,4 @@ export class HeaderComponent implements OnInit {
       this.showHamburger = true;
     }
   }
-
 }
