@@ -85,7 +85,7 @@
 #logo {
 
     &:hover {
-        text-shadow: 1px 1px 4px #fff;
+        text-shadow: 1px 0px 2px #FFF;
         cursor: pointer;
     }
 
@@ -167,7 +167,7 @@
     gap: 32px;
 
 
-    &>span:hover { text-shadow: 1px 1px 4px #FFF; cursor: pointer;}
+    &>span:hover { text-shadow: 1px 0px 2px #FFF; cursor: pointer;}
 
     &.vertical {
         flex-direction: column;
