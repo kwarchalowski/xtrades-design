@@ -5,7 +5,7 @@
     display: block;
     width: 100%;
     // height: calc(100% + 88px);
-    
+
     height: calc(100vh - 190px);
 
     background-color: #fff;
@@ -173,7 +173,7 @@
                         .footer-note {
                             color: #445A63;
                             font-family: Poppins;
-                            font-size: 9px;
+                            font-size: 10px;
                             font-style: normal;
                             font-weight: 400;
                             line-height: 18px;
@@ -350,14 +350,14 @@
 @media screen and (max-width: 1000px) {
 
     #content {
-        
-    // height: calc(100vh - 190px);
-    height: 100vh;
 
-    #career {
-        // width: calc(100vw - 60px);
-        width: 100%;
-    }
+        // height: calc(100vh - 190px);
+        height: 100vh;
+
+        #career {
+            // width: calc(100vw - 60px);
+            width: 100%;
+        }
 
 
         .card-bg-img {
@@ -384,11 +384,28 @@
         width: 100%;
     }
 
-    #content>#career>.offer-wrapper>.offer-card-container>.card-content-container >.card-content {
+    #content>#career>.offer-wrapper>.offer-card-container>.card-content-container>.card-content {
         margin-top: 0px;
+
+        &>h1 {
+            font-size: 18px;
+        }
+
+        &>h2 {
+            font-size: 12px;
+        }
+
+        &>ul {
+            transform: translateX(-6px);
+            margin-top: 0px;
+
+            li:first-child:not(:is(.rent)) {
+                margin-top: 0px;
+            }
+        }
     }
 
-    
+
     #content>#career>.offer-wrapper>.offer-card-container>.card-content-container>.card-content>.card-header {
         margin-bottom: 18.5px;
         display: flex;
@@ -397,46 +414,46 @@
         align-items: center;
         padding-left: 0px;
 
-        .header-note{
+        .header-note {
 
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-        
-        svg {
-            // padding-right: 15px;
 
+            svg {
+                // padding-right: 15px;
+
+            }
         }
-    }
     }
 
     #content>#career>.offer-wrapper>.offer-card-container>.card-content-container>.card-footer {
         width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #DEE2E7;
-    position: relative;
-    bottom: 0px;
-    gap: 25px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid #DEE2E7;
+        position: relative;
+        bottom: 0px;
+        gap: 25px;
 
-    &>.footer-note {
-        // margin: 0px;
-        margin-top: 15px;
-        margin-bottom: 0px;
-        min-width: 285px;
-        width: 80%;
-        text-align: center;
-    }
+        &>.footer-note {
+            // margin: 0px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            min-width: 285px;
+            width: 80%;
+            text-align: center;
+        }
 
-    &>.btnContact-card {
-        margin-bottom: 30px;
-        margin-top: 0px;
-    }
+        &>.btnContact-card {
+            margin-bottom: 30px;
+            margin-top: 0px;
+        }
 
     }
 
