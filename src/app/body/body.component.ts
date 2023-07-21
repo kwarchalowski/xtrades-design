@@ -21,18 +21,18 @@ export class BodyComponent {
 
   getBodyClass(): string {
     let styleClass = '';
-    //! was 800
+
     if (this.screenWidth < 1000) {
       styleClass = 'narrow';
       
     }
 
 
-    // if (this.collapsed && this.screenHeight > 800) {
-    //   styleClass = 'body-trimmed';
-    // } else if (this.collapsed && this.screenHeight <= 800 && this.screenHeight > 0) {
-    //   styleClass = 'body-md-screen';
-    // }
+
+
+
+
+
     return styleClass;
   }
 

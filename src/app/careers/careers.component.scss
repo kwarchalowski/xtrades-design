@@ -1,10 +1,10 @@
 #content {
-    // display: flex;
-    // width: 100vw;
-    // height: calc(100vh - 88px);
+
+
+
     display: block;
     width: 100%;
-    // height: calc(100% + 88px);
+
 
     height: calc(100vh - 190px);
 
@@ -21,9 +21,9 @@
         width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
-        // height: 100%;
+
         height: calc(100vh - 104px);
-        // margin-left: 14%;
+
 
         .hiringLabel {
             color: #445A63;
@@ -42,9 +42,9 @@
             flex-direction: row;
             width: 100%;
             justify-content: center;
-            // min-width: 1050px;
 
-            //* Card container
+
+
             .offer-card-container {
                 display: flex;
                 width: 80%;
@@ -352,11 +352,11 @@
     }
 }
 
-//* MEDIA
+
 @media all and (max-width: 1000px) {
     #content {
         height: calc(100% - 88px);
-        // padding-top: 88px;
+
     }
 }
 
@@ -365,11 +365,11 @@
 
     #content {
 
-        // height: calc(100vh - 190px);
+
         height: 100vh;
 
         #career {
-            // width: calc(100vw - 60px);
+
             width: 100%;
         }
 
@@ -439,7 +439,7 @@
             width: 100%;
 
             svg {
-                // padding-right: 15px;
+
 
             }
         }
@@ -458,7 +458,7 @@
         gap: 25px;
 
         &>.footer-note {
-            // margin: 0px;
+
             margin-top: 15px;
             margin-bottom: 0px;
             min-width: 285px;

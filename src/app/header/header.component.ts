@@ -81,10 +81,10 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar(): void {
     const hamburger: HTMLElement | null = document.getElementById('hamburger');
-    // if(this.router.url == '/career') hamburger.style.filter = 'invert(0)';
-    // this.isPageNarrow != this.isPageNarrow;
-    // this.showHamburger = !this.showHamburger;
-    // console.log('hey');
+
+
+
+
     if(hamburger && this.isPageNarrow) {
       console.log(this.showSidebar);
       // this.showSidebar = true;
@@ -101,7 +101,7 @@ export class HeaderComponent implements OnInit {
         this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth, screenHeight: this.screenHeight, showSidenav: this.showSidebar});
       }
     }
-    // this.showSidebar != this.showSidebar;
+
   }
 
 
@@ -136,7 +136,7 @@ export class HeaderComponent implements OnInit {
 
     hamburger.style.filter = 'invert(1)'
 
-    // if(hamburger && this.router.url == '/career') hamburger.style.filter = 'invert(1)';
-    // else if(hamburger) hamburger.style.filter = 'invert(0)';
+
+
   }
 }

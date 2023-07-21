@@ -21,7 +21,7 @@ export class LoginButtonsComponent {
     }
 
     this.horizontal = true;
-    // this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
+
 
   }
 
