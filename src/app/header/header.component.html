@@ -1,29 +1,29 @@
 <div id="container" class="container" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
     <!-- Xtrades logo -->
-    <div id="logo" routerLink="login" routerLinkActive="active" *ngIf="!showHamburger" @thumbsInOut class="anim"
+    <div id="logo" routerLink="login" routerLinkActive="active" *ngIf="!showHamburger" @thumbsInOut class="anim noselect"
         [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
         <img id="group7548" src="../../assets/group7548.svg" alt="Xtrades logo">
         <span id="group7548-label" *ngIf="!isPageNarrow">Xtrades</span>
     </div>
-    <div id="hamburger" *ngIf="showHamburger" @thumbsInOut class="anim" (click)="toggleSidebar()">
+    <div id="hamburger" *ngIf="showHamburger" @thumbsInOut class="anim noselect" (click)="toggleSidebar()">
         <img src="../../assets/hamburger.svg" alt="Menu button">
     </div>
     <div id="content" @thumbsInOut [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="anim">
         
         <div class="menu-links anim" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
-            <span id="home" routerLink="login" routerLinkActive="active" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="highlight">Home</span>
-            <span id="career" routerLink="career" routerLinkActive="active" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="highlight">Career</span>
+            <span id="home" routerLink="login" routerLinkActive="active" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="highlight noselect">Home</span>
+            <span id="career" routerLink="career" routerLinkActive="active" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" class="highlight noselect">Career</span>
         </div>
 
         <div id="buttons" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
-            <button class="btn-membership btn-bouncing" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
+            <button class="btn-membership btn-bouncing noselect" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
                 <span>Membership</span>
                 <svg *ngIf="isPageNarrow" class="stroke" xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
                     <path opacity="0.5" d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg>
             </button>
-            <button class="btn-login btn-bouncing" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" routerLink="/login"
+            <button class="btn-login btn-bouncing noselect" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'" routerLink="/login"
                 routerLinkActive="active" ariaCurrentWhenActive="page">
                 <span>Login</span>
                 <svg *ngIf="isPageNarrow" class="stroke" xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
@@ -39,7 +39,7 @@
                         <li class="highlight">Terms & Conditions</li>
                     </ul>
                 </div>
-                <div class="copyrights">
+                <div class="copyrights noselect">
                     © Copyright 2022 - Xtrades. All rights reserved.
                 </div>
             </div>

@@ -6,8 +6,6 @@
 }
 
 html {
-
-
     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
     min-width: 350px;
 }
@@ -15,19 +13,15 @@ html {
 body {
     border: none;
     min-width: 350px;
-
 }
 
 app-root {
-
-
-
-
-
     background: linear-gradient(180deg, #133B75 0%, #0C274F 100%);
 }
 
 .btn-bouncing {
+    cursor: pointer;
+
     @keyframes bounce {
 
         0%,
@@ -85,3 +79,10 @@ app-root {
         cursor: pointer;
     }
 }
+
+
+        .noselect {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        }

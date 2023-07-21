@@ -87,7 +87,7 @@ export class HeaderComponent implements OnInit {
 
     if(hamburger && this.isPageNarrow) {
       console.log(this.showSidebar);
-      // this.showSidebar = true;
+
       const container: HTMLElement | null = document.getElementById('container');
     this.showSidebar = !this.showSidebar;
 
