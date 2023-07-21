@@ -1,6 +1,6 @@
 <div id="container" class="container" [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
     <!-- Xtrades logo -->
-    <div id="logo" *ngIf="!showHamburger" @thumbsInOut class="anim"
+    <div id="logo" routerLink="login" routerLinkActive="active" *ngIf="!showHamburger" @thumbsInOut class="anim"
         [ngClass]="!isPageNarrow ? 'horizontal' : 'vertical'">
         <img id="group7548" src="../../assets/group7548.svg" alt="Xtrades logo">
         <span id="group7548-label" *ngIf="!isPageNarrow">Xtrades</span>

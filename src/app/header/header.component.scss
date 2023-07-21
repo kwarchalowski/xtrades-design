@@ -81,6 +81,10 @@
 
 #logo {
 
+    &:hover {
+        text-shadow: 1px 1px 4px #fff;
+    }
+
     &.horizontal {
         display: flex;
         margin: 32px 24px 33px 24px;
@@ -157,6 +161,9 @@
     line-height: normal;
     // letter-spacing: -1px;
     gap: 32px;
+
+
+    &>span:hover { text-shadow: 1px 1px 4px #FFF; }
 
     &.vertical {
         flex-direction: column;

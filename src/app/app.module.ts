@@ -9,6 +9,8 @@ import { CareersComponent } from './careers/careers.component';
 import { LoginButtonsComponent } from './login-buttons/login-buttons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BodyComponent } from './body/body.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../../src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { BodyComponent } from './body/body.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
   ],
   providers: [],
   bootstrap: [AppComponent]

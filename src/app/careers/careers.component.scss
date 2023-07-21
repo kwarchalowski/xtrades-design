@@ -57,12 +57,18 @@
                 margin-top: 90px;
                 margin-left: 57px;
 
+                &.last {
+                    margin-top: 5px;
+                }
+
                 .card-content-container {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
                     height: 100%;
                     width: 100%;
+
+
 
                     .card-content {
                         color: #445A63;
@@ -82,8 +88,16 @@
                             color: #445A63;
                             font-weight: 500;
                             line-height: normal;
-                            border-bottom: 2px solid #DEE2E7;
                             padding: 21px 17px;
+                            border-bottom: 2px solid #DEE2E7;
+
+                            &.noborder {
+                                border-bottom: none;
+                                margin-bottom: 0;
+                                margin-top: 21px;
+                                padding: 0;
+
+                            }
 
                         }
 
@@ -382,6 +396,8 @@
         margin-top: 20px;
         margin-left: 21px;
         width: 100%;
+        border: none;
+
     }
 
     #content>#career>.offer-wrapper>.offer-card-container>.card-content-container>.card-content {

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "xtr-demo-site-cn1734b9"
+  },
+  "targets": {
+    "xtr-demo-site-cn1734b9": {
+      "hosting": {
+        "xtrades-design": [
+          "xtr-demo-site-cn1734b9"
+        ]
+      }
+    }
+  }
+}
