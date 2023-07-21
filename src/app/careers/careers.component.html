@@ -3,7 +3,7 @@
         <div class="offer-wrapper">
             <div class="offer-list">
                 <div class="hiringLabel">We're Hiring</div>
-                <ul>
+                <ul *ngIf="getScreenWidth >= 1000">
                     <li>Film Editor and Creator for 
                         Trading Content</li>
                     <li>Full Stack Principal Software
@@ -13,9 +13,21 @@
                 </ul>
             </div>
             <div class="offer-card-container">
-                <img src="../../assets/card-bg.svg" alt="Card background">
+                <img src="../../assets/card-bg.svg" alt="Card background" class="card-bg-img">
                 <div class="card-content-container">
                     <div class="card-content">
+                        <div class="card-header" *ngIf="getScreenWidth < 1000">
+                            <div class="header-note">
+                                <div class="note">
+                                    Film Editor and Creator for Trading Content
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path opacity="0.5" d="M1 7L7 1L13 7" stroke="#AFB9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                         <h1>
                             Hiring a Film Editor and Creator for Trading Content
                         </h1>

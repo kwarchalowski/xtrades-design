@@ -15,13 +15,14 @@ export class BodyComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
-    if(this.screenWidth >= 800) this.showSidenav = false;
+    if(this.screenWidth >= 1000) this.showSidenav = false;
     else this.showSidenav = true;
   }
 
   getBodyClass(): string {
     let styleClass = '';
-    if (this.screenWidth < 800) {
+    //! was 800
+    if (this.screenWidth < 1000) {
       styleClass = 'narrow';
       
     }

@@ -14,7 +14,7 @@ export class LoginButtonsComponent {
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
     
-    if(this.screenWidth <= 800) {
+    if(this.screenWidth <= 1000) {
       this.horizontal = false;
       // this.toggleSideNav.emit({showHamburger: this.showHamburger, screenWidth: this.screenWidth});
       return

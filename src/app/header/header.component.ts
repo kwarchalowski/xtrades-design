@@ -109,7 +109,7 @@ export class HeaderComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
 
-    if(this.screenWidth <= 800) {
+    if(this.screenWidth <= 1000) {
       this.checkPath();
       this.showHamburger = true; //!
       this.isPageNarrow = true;
