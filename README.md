@@ -1,6 +1,6 @@
 #  :globe_with_meridians: LIVE VERSION:
-## https://xtr-demo-site-cn1734b9.web.app
-
+# https://xtr-demo-site-cn1734b9.web.app
+screenshots: https://imgur.com/a/Ns9gghu
 ---
 
 # XtradesDesign
